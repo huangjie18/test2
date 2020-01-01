@@ -1,0 +1,75 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 PRESERVE8
+    2 00000000                 THUMB
+    3 00000000                 AREA             |.text|, CODE, READONLY
+    4 00000000         LLD_PDU_TX_FLUSH_LIST_PATCH
+                               PROC
+    5 00000000                 EXPORT           LLD_PDU_TX_FLUSH_LIST_PATCH
+    6 00000000                 IMPORT           lld_pdu_tx_flush_patch_c
+    7 00000000 4621            MOV              R1,R4
+    8 00000002 F7FF FFFE       BL               lld_pdu_tx_flush_patch_c
+    9 00000006 4604            MOV              R4,R0
+   10 00000008 4800            LDR              R0,[pc,#0]
+   11 0000000A 4700            BX               R0
+   12 0000000C 00018641        DCD              0x18641
+   13 00000010         
+   14 00000010                 ENDP
+   15 00000010         
+   16 00000010                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
+work --depend=.\objects\lld_pdu_tx_flush_list_patch_asm.d -o.\objects\lld_pdu_t
+x_flush_list_patch_asm.o -INone -IF:\项目\蓝牙MESH应用(蓝牙网关)\项目工程（2019
+11280936）\JMESH_SDK_V2.5.0_V1.5_Slave\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.
+0\Device\ARM\ARMCM0plus\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__M
+ICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" --predefine="ARMCM0P S
+ETA 1" --list=.\listings\lld_pdu_tx_flush_list_patch_asm.lst plf\apollo_00\src\
+patch_list\armcc\lld_pdu_tx_flush_list_patch_asm.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 3 in file plf\apollo_00\src\patch_list\armcc\lld_pdu_tx_flush_lis
+t_patch_asm.s
+   Uses
+      None
+Comment: .text unused
+LLD_PDU_TX_FLUSH_LIST_PATCH 00000000
+
+Symbol: LLD_PDU_TX_FLUSH_LIST_PATCH
+   Definitions
+      At line 4 in file plf\apollo_00\src\patch_list\armcc\lld_pdu_tx_flush_lis
+t_patch_asm.s
+   Uses
+      At line 5 in file plf\apollo_00\src\patch_list\armcc\lld_pdu_tx_flush_lis
+t_patch_asm.s
+Comment: LLD_PDU_TX_FLUSH_LIST_PATCH used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+lld_pdu_tx_flush_patch_c 00000000
+
+Symbol: lld_pdu_tx_flush_patch_c
+   Definitions
+      At line 6 in file plf\apollo_00\src\patch_list\armcc\lld_pdu_tx_flush_lis
+t_patch_asm.s
+   Uses
+      At line 8 in file plf\apollo_00\src\patch_list\armcc\lld_pdu_tx_flush_lis
+t_patch_asm.s
+Comment: lld_pdu_tx_flush_patch_c used once
+1 symbol
+336 symbols in table

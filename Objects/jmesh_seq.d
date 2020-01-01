@@ -1,0 +1,14 @@
+.\objects\jmesh_seq.o: jmeshBLE\src\network\jmesh_seq.c
+.\objects\jmesh_seq.o: jmeshBLE\src\network\jmesh_seq.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_types.h
+.\objects\jmesh_seq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\jmesh_seq.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_config.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_save_define.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/../app/expand/app_expand2/light/light_server.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/../app/expand/app_expand2/water/water.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_save.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_save_define.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_save.h
+.\objects\jmesh_seq.o: .\jmeshAPP\beidian_app_cfg.h
+.\objects\jmesh_seq.o: jmeshBLE\src\network\../jmesh/jmesh_save_define.h

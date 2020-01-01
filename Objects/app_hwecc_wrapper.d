@@ -1,0 +1,17 @@
+.\objects\app_hwecc_wrapper.o: plf\peripheral\app_hwecc\app_hwecc_wrapper.c
+.\objects\app_hwecc_wrapper.o: plf\peripheral\app_hwecc\app_hwecc_wrapper.h
+.\objects\app_hwecc_wrapper.o: plf\peripheral\app_hwecc\app_hwecc.h
+.\objects\app_hwecc_wrapper.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\app_hwecc_wrapper.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\app_hwecc_wrapper.o: .\plf\peripheral\periph_common.h
+.\objects\app_hwecc_wrapper.o: plf\apollo_00\src\inc\_reg_base_addr.h
+.\objects\app_hwecc_wrapper.o: .\plf\apollo_00\src\arch\apollo_00.h
+.\objects\app_hwecc_wrapper.o: .\plf\inc\cmsis\core_cm0plus.h
+.\objects\app_hwecc_wrapper.o: .\plf\inc\cmsis\core_cmInstr.h
+.\objects\app_hwecc_wrapper.o: .\plf\inc\cmsis\cmsis_armcc.h
+.\objects\app_hwecc_wrapper.o: .\plf\inc\cmsis\core_cmFunc.h
+.\objects\app_hwecc_wrapper.o: .\plf\apollo_00\src\arch\system_apollo_00.h
+.\objects\app_hwecc_wrapper.o: plf\peripheral\app_hwecc\reg_ecc.h
+.\objects\app_hwecc_wrapper.o: plf\apollo_00\src\peripheral_integration\hwecc\hwecc_integration.h
+.\objects\app_hwecc_wrapper.o: .\plf\peripheral\periph_semaphore.h
+.\objects\app_hwecc_wrapper.o: .\plf\peripheral\periph_error.h

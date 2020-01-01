@@ -1,0 +1,13 @@
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_device.c
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_device.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_types.h
+.\objects\jmesh_device.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\jmesh_device.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_config.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_save.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_save_define.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\../app/expand/app_expand2/light/light_server.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\../app/expand/app_expand2/water/water.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_save.h
+.\objects\jmesh_device.o: .\jmeshAPP\beidian_app_cfg.h
+.\objects\jmesh_device.o: jmeshBLE\src\jmesh\jmesh_save_define.h

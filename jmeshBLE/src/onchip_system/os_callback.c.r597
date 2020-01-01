@@ -1,0 +1,74 @@
+#include"os_callback.h"
+#include"../../driver/jmesh_ble.h"
+#include"../../foundation/config/configuration_cmd.h"
+#if (JMESH_DRIVER_BX2400)
+#include"FreeRTOS.h"
+#include"task.h"
+#elif (JMESH_DRIVER_X86)
+#include"windows.h"
+#endif
+
+extern adv_scan_time_t adv_scan_time;
+
+void os_start_callback(void){
+    jmesh_uart_init(JMESH_UART_0, JMESH_UART_BAUD_115200, JMESH_UART_PARITY_EVEN,JMESH_UART_STOP_BITS_1);
+    jmesh_gpio_init(JMESH_LED1,JMESH_GPIO_MODE_OUTPUT);
+	jmesh_random_init(os_time_ticks());
+	jmesh_adv_scan_init();	
+	jmesh_mac_init();
+    jmesh_pdu_init();
+    jmesh_addr_init();
+    jmesh_TTL_init();
+    jmesh_features_init();
+    jmesh_network_init();
+    jmesh_segment_init();
+    jmesh_netkey_init();
+    jmesh_access_init();
+    jmesh_appkey_init();
+	jmesh_device_init();
+    jmesh_interface_init();
+    jmesh_gatt_init();
+    jmesh_routing_init();
+    jmesh_routing_neighbor_init();
+    #ifdef JMESH_ROUTING_USE_SUBNET
+    jmesh_routing_subnet_init();	
+    #endif
+	jmesh_seq_list_init();
+    jmesh_gpio_set(JMESH_LED1, GPIO_VALUE_HIGH);
+    jmesh_gpio_init(POWER_LIGHT,JMESH_GPIO_MODE_OUTPUT);
+		
+    jmesh_gpio_set(POWER_LIGHT, GPIO_VALUE_LOW);
+	jmesh_set_relay_feature(JMESH_FEATURE_RELAY);//JMESH_FEATURE_RELAY);	JMESH_FEATURE_DISABLE
+	jmesh_TTL_set_default(5);	
+
+//		network_light_indicate_init();
+    //jmesh_ble_reset();
+}
+extern void gatt_connect_test(void);
+void os_inited_callback(void){
+    jmesh_adv_start();
+    jmesh_routing_beacon_start();
+    unsigned char key[16]={0x11,0x22,0x33,0x44,0x11,0x11,0x11,0x11,0x22,0x22,0x22,0x22,0x33,0x33,0x33,0x37};
+    jmesh_netkey_state_set(0,key);
+//	jmesh_set_primary_addr(7);
+//	jmesh_device_new(3,2,key,key);
+	jmesh_appkey_set(0,1,key);
+//    jmesh_model_bind_app(&test_client,jmesh_appkey_get_by_key_index(0,200));
+//    jmesh_model_bind_app(&test_server,jmesh_appkey_get_by_key_index(0,200));
+//    jmesh_model_bind_app(&light_client,jmesh_appkey_get_by_key_index(0,200));
+//    jmesh_model_bind_app(&light_server,jmesh_appkey_get_by_key_index(0,200));
+//    jmesh_model_bind_app(&light_config,jmesh_appkey_get_by_key_index(0,200));
+//    jmesh_model_bind_app(&realcomm_client,jmesh_appkey_get_by_key_index(0,200));
+//    jmesh_model_bind_app(&realcomm_server,jmesh_appkey_get_by_key_index(0,200));
+	  jmesh_model_bind_app(&app_expand,jmesh_appkey_get_by_key_index(0,1));
+	
+//    jmesh_model_bind_app(&realcomm_config,jmesh_appkey_get_by_key_index(0,200));
+
+}
+void os_cycle_callback(void){
+    #if (JMESH_DRIVER_BX2400)
+    #elif (JMESH_DRIVER_X86)
+    Sleep(1);
+
+    #endif
+}

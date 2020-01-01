@@ -1,0 +1,24 @@
+#ifndef JMESH_APP_EXPAND1_H
+#define JMESH_APP_EXPAND1_H
+#include"../app_expand.h"
+
+
+enum{
+    JMESH_APP_EXPAND1_DEVICE_INFO_GET=0,
+    JMESH_APP_EXPAND1_DEVICE_INFO_STATUS=1,
+
+    JMESH_APP_EXPAND1_DEVICE_REPORT_BIND=2,
+    JMESH_APP_EXPAND1_DEVICE_REPORT_UNBIND=3,
+
+    JMESH_APP_EXPAND1_DEVICE_REPORT_STATUS=4,
+
+    JMESH_APP_EXPAND1_DEVICE_REPORT=5,
+    /**< user define next */
+};
+
+
+
+void jmesh_app_expand1_init(void);
+
+
+#endif // JMESH_APP_EXPAND1_H
